@@ -7,7 +7,7 @@ const moment = require('moment')
 
 const imgm = require("../Models/imgid.js")
 const schema = require("../Models/account.js")
-imgur.setClientId("dc167161c8659c7")
+imgur.setClientId(process.env.clientImgurId)
 
 mongoose.connect(process.env.db, {
     useNewUrlParser: true, useUnifiedTopology: true
