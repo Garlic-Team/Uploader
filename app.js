@@ -10,7 +10,7 @@ app.set('view engine', 'ejs');
 app.use(express.static('static'));
 app.use(require('body-parser').urlencoded({ extended: true }));
 app.use(session({
-    secret: '48738924783748273742398747238',
+    secret: 'secret session',
     resave: false,
     saveUninitialized: false,
     expires: 604800000,
