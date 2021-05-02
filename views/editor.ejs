@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="https://i.imgur.com/6DjiUmf.png" type="image/icon">
+
+    <title>Garlic Team</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="text-center text-light" style="padding-top: 65px; padding-bottom: 20px;">
+    <%- include('partials/navbar.ejs') %>
+
+    <div class="page-content shadow">
+      <h1 style="padding: 40px;">EDITOR</h1>              
+    </div>
+    <br>
+    <div class="page-content">
+      <img src="https://cdn.discordapp.com/avatars/<%- user.id %>/<%- user.avatar%>" height="150px" alt="Avatar" style="border-radius: 2px;" />
+    </div>
+    <br>
+
+    <div class="container text-light">
+      <form role="form" action="/editor" method="POST">
+          <div class="mb-3">
+              <label for="uptext" class="form-label text-light">* Title of Embed</label>
+              <input required type="text" class="form-control" name="title" id="title"  placeholder="embed (title)" value="<%- userInfo.embedTitle %>">
+
+              <br>
+              <label for="uptext" class="form-label text-light">Description of Embed</label>
+              <input type="text" class="form-control" name="description" id="description" placeholder="embed (description) | can be empty" value="<%- userInfo.embedDescription %>">
+
+              <br>
+              <label for="color" class="form-label text-light">* Color</label>
+              <input type="text" class="form-control" name="color" id="color" placeholder="Color (hex)" value="<%- userInfo.embedColor %>">
+
+              <br>
+              <label for="color" class="form-label text-light">* Fake Link</label>
+              <input required type="text" class="form-control" name="fakeLink" id="fakeLink" placeholder="Fake Link" value="<%- userInfo.fakeLink %>">
+
+              <br>
+              <button type="submit" class="btn btn-success">Save</button>
+          </div>
+      </form>
+      <button onclick="window.location.href = '/'" type="submit" class="btn btn-danger">Back</button>
+    </div>
+
+    </div>
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>

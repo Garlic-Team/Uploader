@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg fixed-top shadow navbar-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      UPLOADER
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto mb-2 mb-lg-0"></ul>
+        <ul class="navbar-nav">
+        <% if(user) {%>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+                <img src="https://cdn.discordapp.com/avatars/<%- user.id %>/<%- user.avatar%>" class="rounded-circle" height="42" alt="Avatar"/> <span style="padding-left: 10px;"><%- user.tag %></span>
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="/"> Home</a></li>
+                <li><a class="dropdown-item" href="/authorize/logout"> Logout</a></li>
+            </ul>
+          </li>
+        <% } else { %>
+          <li class="nav-item">
+            <a class="nav-link" href="/authorize/">Login</a>
+          </li>
+        <% } %>
+        </ul>
+    </div>
+  </div>
+</nav>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0/mdb.min.js"></script>

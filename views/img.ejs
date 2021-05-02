@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+          <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
+
+	  <meta property="al:android:url" content="<%= rawlink %>" />
+          <meta property="al:android:app_name" content="<%= embedTitle %>" />
+          <meta property="al:android:package" content="com.img.mobile" />
+	  <meta property="al:ios:url" content="<%= rawlink %>" />
+          <meta property="al:ios:app_name" content="<%= embedTitle %>" />
+	  <meta property="al:web:url" content="<%= rawlink %>" />
+          <meta property="og:type" content="website" />
+          <meta property="og:description" content="<%= embedDescription %>" />
+          <meta property="og:image" content="<%= rawlink %>" />
+          <meta name="theme-color" content="<%= embedColor %>">
+          <meta name="twitter:card" 
+          content="summary_large_image" />
+          <meta name="twitter:title" content="<%= embedTitle %>" />
+          <meta name="twitter:description" content="<%= embedDescription %>" />
+          <meta name="twitter:image:src" content="<%= link %>" />
+    </head>
+    <style>
+      html, body {
+          color: white;
+          background: #212121;
+          display: flex;
+          height: 100%;
+          align-items: center;
+          justify-content: center;
+          font-family: 'Ubuntu Mono', monospace;
+      }
+
+
+      .card {
+          width: 200px;
+          min-width: 700px;
+          background: #212121;
+          border-radius: 20px;
+          box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.3);
+          animation: float 6s ease-in-out infinite;
+          overflow: hidden;
+      }
+
+      #rest {  
+          padding: 30px 15px;
+          line-height: 30px;
+          color: #282b30;
+      }
+
+      .img-fluid {
+          max-width:100%;
+          height:auto
+      }
+    </style>
+    <body>
+        <div align="center">
+            <div class="card">
+                <div class="rest">
+                    <h2>Uploaded by <span style="color: gray"><%= user %></span> (<%= size %>)</h2>
+                    <img class="img-fluid" src="<%= link %>">
+                    <h4>Uploaded at: <span style="color: gray"><%= date %></span></h4>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

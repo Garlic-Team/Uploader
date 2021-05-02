@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="https://i.imgur.com/6DjiUmf.png" type="image/icon">
+
+    <title>Garlic Team</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="text-center text-light" style="padding-top: 65px; padding-bottom: 20px;">
+    <%- include('partials/navbar.ejs') %>
+
+    <% if (user) { %>
+    <%- include('partials/dashboard.ejs') %>
+    <% } else { %>
+      <br>
+      <h1 class="rainbow" style="font-weight: bold;">GARLIC UPLOADER</h1>
+      <br>
+      <h3>Fastest, encrypted image uploader</h3>
+    <% } %>
+  </div>
+
+  <%- include('partials/footer.ejs') %>
+</body>
+</html>

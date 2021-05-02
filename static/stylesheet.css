@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap&family=Overpass:wght@600&display=swap');
+
+body {
+    background: #2C2F33;
+    margin: 0 0;
+    padding: 0 0;
+    font-family: 'Overpass', sans-serif;
+}
+
+.shadow{-webkit-box-shadow:0 .5rem 1rem rgba(0,0,0,.15)!important;box-shadow:0 .5rem 1rem rgba(0,0,0,.15)!important}
+
+.page-content {
+    padding: 4px 42px;
+    text-align: center;
+}
+
+.page-content h1 { margin-bottom: -10px; }
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+    color: #ffffff;
+}
+
+p, a {
+    font-weight: 300;
+    color: #ffffff;
+}
+
+.rainbow {animation: animationtext 7s infinite, tada 2s;}
+
+
+@-webkit-keyframes animationtext {
+ 0% {
+  color:#f45c41
+ }
+ 10% {
+  color:#f4ac41
+ }
+ 20% {
+  color:#f4f441
+ }
+ 30% {
+  color:#4ef442
+ }
+ 40% {
+  color:#41b5f4
+ }
+ 50% {
+  color:#8a4cff
+ }
+ 60% {
+  color:#41b5f4
+ }
+ 70% {
+  color:#4ef442
+ }
+ 80% {
+  color:#f4f441
+ }
+ 90% {
+  color:#f4ac41
+ }
+ to {
+  color:#f45c41
+ }
+}
+@keyframes animationtext {
+ 0% {
+  color:#f45c41
+ }
+ 10% {
+  color:#f4ac41
+ }
+ 20% {
+  color:#f4f441
+ }
+ 30% {
+  color:#4ef442
+ }
+ 40% {
+  color:#41b5f4
+ }
+ 50% {
+  color:#8a4cff
+ }
+ 60% {
+  color:#41b5f4
+ }
+ 70% {
+  color:#4ef442
+ }
+ 80% {
+  color:#f4f441
+ }
+ 90% {
+  color:#f4ac41
+ }
+ to {
+  color:#f45c41
+ }
+}

@@ -1,0 +1,5 @@
+{
+    "port": 3000,
+    "scopes": ["identify", "guilds","guilds.join"],
+    "redirectUri": "https://upload.garlic-team.tk/authorize/callback"
+}
